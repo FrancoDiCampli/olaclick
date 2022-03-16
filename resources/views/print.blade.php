@@ -12,11 +12,16 @@
 
     <script src="js/app.js"></script>
     <script>
-        console.log('done')
-        window.Echo.channel('test_channel')
-        .listen('PrintOrder', (e) => {
-            console.log(e);
-        });
+
+        window.onload = function() {
+
+            Echo.channel('test_channel')
+            .listen('PrintOrder', () => {
+                window.print()
+            });
+        }
+
+
     </script>
 </body>
 </html>
