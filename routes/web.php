@@ -1,5 +1,6 @@
 <?php
 
+use App\Events\PrintOrder;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    broadcast(new PrintOrder());
     return view('welcome');
 });
+
+Route::get('print',[\App\Http\Controllers\PrintController::class,'printView'])->name('print.view');
