@@ -19,7 +19,7 @@ class WebhookHandler extends ProcessWebhookJob
         $data = $data['payload'];
         Log::info($data);
 
-        broadcast(new PrintOrder());
+        broadcast(new PrintOrder($data));
 
     }
 

@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 class PrintController extends Controller
 {
     public function printView(){
-        return view('print');
+        $invoice['id'] = 1;
+        $invoice['article'] = 'Remera';
+        $invoice['qty'] = 1;
+        $invoice['price'] = 15;
+        return view('invoice',compact('invoice'));
     }
 }
