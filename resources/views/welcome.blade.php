@@ -128,5 +128,17 @@
                 </div>
             </div>
         </div>
+        <script src="js/app.js">
+
+        </script>
+        <script>
+              window.onload = function() {
+                Echo.channel('test_channel')
+                .listen('PrintOrder', (e) => {
+                    setData(e)
+                    window.print()
+                });
+        }
+        </script>
     </body>
 </html>

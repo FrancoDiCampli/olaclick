@@ -19,6 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('invoice',[\App\Http\Controllers\PrintController::class,'printView']);
+Route::get('print-web',[\App\Http\Controllers\PrintController::class,'printWeb'])->name('print.web');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

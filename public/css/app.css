@@ -710,10 +710,6 @@ select {
   margin-left: auto;
   margin-right: auto;
 }
-.my-1 {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-}
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -755,9 +751,6 @@ select {
 .-mt-px {
   margin-top: -1px;
 }
-.mt-3 {
-  margin-top: 0.75rem;
-}
 .mb-6 {
   margin-bottom: 1.5rem;
 }
@@ -778,6 +771,9 @@ select {
 }
 .mr-8 {
   margin-right: 2rem;
+}
+.mt-3 {
+  margin-top: 0.75rem;
 }
 .mr-1 {
   margin-right: 0.25rem;
@@ -1268,9 +1264,6 @@ select {
 }
 .text-center {
   text-align: center;
-}
-.text-right {
-  text-align: right;
 }
 .align-middle {
   vertical-align: middle;

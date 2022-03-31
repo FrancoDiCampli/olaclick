@@ -199,7 +199,7 @@
         window.onload = function() {
             Echo.channel('test_channel')
             .listen('PrintOrder', (e) => {
-
+                console.log(e)
                 setData(e)
                 window.print()
             });

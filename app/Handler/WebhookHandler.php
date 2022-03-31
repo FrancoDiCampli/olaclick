@@ -3,6 +3,7 @@
 namespace App\Handler;
 
 use App\Events\PrintOrder;
+use App\Jobs\PrintFromWeb;
 use App\Jobs\ProcessMenu;
 use Illuminate\Support\Facades\Log;
 use Spatie\WebhookClient\ProcessWebhookJob;
@@ -17,9 +18,15 @@ class WebhookHandler extends ProcessWebhookJob
         $data = $this->webhookCall;
 
         $data = $data['payload'];
-        Log::info($data);
 
-        broadcast(new PrintOrder($data));
+        if($data['printer']=='web'){
+
+            PrintFromWeb::dispatch($data);
+
+        }else{
+
+            broadcast(new PrintOrder($data));
+        }
 
     }
 
